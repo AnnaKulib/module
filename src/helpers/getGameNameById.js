@@ -1,19 +1,19 @@
-// import _ from "lodash";
-// import gamesData from "../gameData.json";
+import _ from "lodash";
+import gamesData from "../gameData.json";
 
-// export const getGameNameById = (gameId) => {
-//   const game = _.find(gamesData.games, { id: gameId });
-//   return game ? game.name : "";
-// };
+export const getGameNameById = (gameId) => {
+  const game = _.find(gamesData.games, { id: gameId });
+  return game ? game.name : "";
+};
 
 // ===================== with DB
 //
-export const getGameNameById = async (gameId) => {
-  const apiUrl = "api/games";
-  const response = await fetch(`${apiUrl}/${gameId}`);
-  const game = await response.json();
-  return game ? game.name : "";
-};
+// export const getGameNameById = async (gameId) => {
+//   const apiUrl = "api/games";
+//   const response = await fetch(`${apiUrl}/${gameId}`);
+//   const game = await response.json();
+//   return game ? game.name : "";
+// };
 
 //  ======= або так:
 
